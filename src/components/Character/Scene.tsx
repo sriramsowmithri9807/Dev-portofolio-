@@ -78,12 +78,15 @@ const Scene = () => {
 
       let mouse = { x: 0, y: 0 },
         interpolation = { x: 0.1, y: 0.2 };
+      let trackingEnabled = false;
 
       const onMouseMove = (event: MouseEvent) => {
+        if (!trackingEnabled) return;
         handleMouseMove(event, (x, y) => (mouse = { x, y }));
       };
       let debounce: number | undefined;
       const onTouchStart = (event: TouchEvent) => {
+        if (!trackingEnabled) return;
         const element = event.target as HTMLElement;
         debounce = setTimeout(() => {
           element?.addEventListener("touchmove", (e: TouchEvent) =>
@@ -93,6 +96,7 @@ const Scene = () => {
       };
 
       const onTouchEnd = () => {
+        if (!trackingEnabled) return;
         handleTouchEnd((x, y, interpolationX, interpolationY) => {
           mouse = { x, y };
           interpolation = { x: interpolationX, y: interpolationY };
@@ -107,6 +111,12 @@ const Scene = () => {
         landingDiv.addEventListener("touchstart", onTouchStart);
         landingDiv.addEventListener("touchend", onTouchEnd);
       }
+
+      // Enable mouse tracking after intro animation completes
+      setTimeout(() => {
+        trackingEnabled = true;
+      }, 6000);
+
       const animate = () => {
         requestAnimationFrame(animate);
         if (headBone) {

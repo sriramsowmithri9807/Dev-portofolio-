@@ -353,6 +353,7 @@
   bottom: 40px;
   top: inherit;
   z-index: 9;
+  text-align: center;
 }
 
 .landing-info h3 {
@@ -365,7 +366,7 @@
 
 .landing-info h2 {
   margin: 0;
-  margin-top: -20px;
+  margin-top: 5px;
   margin-left: 20px;
   font-family: "Geist", sans-serif;
   font-weight: 600;
@@ -394,6 +395,7 @@ h2.landing-info-h2 {
   font-size: 36px;
   width: 150%;
   margin: 0;
+  margin-bottom: 5px;
   font-family: "Geist", sans-serif;
   font-weight: 600;
   position: relative;
@@ -501,7 +503,7 @@ h2.landing-info-h2 {
 
   .landing-info {
     bottom: auto;
-    top: 51%;
+    top: 53%;
     z-index: inherit;
     text-align: left;
     transform: translate(0%, -50%);
@@ -520,7 +522,7 @@ h2.landing-info-h2 {
 
   .landing-info {
     bottom: auto;
-    top: 51%;
+    top: 53%;
     z-index: inherit;
     text-align: left;
     transform: translate(0%, -50%);
@@ -551,4 +553,6 @@ h2.landing-info-h2 {
   h2.landing-info-h2 {
     font-size: 75px;
   }
-}/* Accessibility improvements */
+}
+
+/* Accessibility improvements */
