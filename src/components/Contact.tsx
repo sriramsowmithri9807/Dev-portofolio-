@@ -100,16 +100,16 @@ const Contact = () => {
               data-cursor="disable"
               className="contact-social"
             >
-              Twitter <MdArrowOutward />
+              X <MdArrowOutward />
             </a>
             <a
-              href={config.contact.facebook}
+              href={config.contact.substack}
               target="_blank"
               rel="noopener noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
-              Facebook <MdArrowOutward />
+              Substack <MdArrowOutward />
             </a>
             <a
               href={config.contact.instagram}
